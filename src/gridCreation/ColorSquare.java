@@ -2,26 +2,26 @@ package gridCreation;
 
 public class ColorSquare {
 
-		private char color;
+		private String color;
 		
 		public ColorSquare(){
 			
 		}
 		
-		public ColorSquare(char color){
+		public ColorSquare(String color){
 			this.color = color;
 		}
 		
-		public void setColor(char color){
+		public void setColor(String color){
 			this.color = color;
 		}
 		
-		public char getColor(){
+		public String getColor(){
 			return this.color;
 		}
 		@Override
 		public String toString(){
-			String output = "" + this.color;
+			String output = this.color;
 			return output;
 		}
 		
