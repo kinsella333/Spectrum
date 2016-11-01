@@ -4,16 +4,34 @@ import gridCreation.*;
 public class Test {
 
 	public static void main(String[] args) {
-		SolutionGenerator test = new SolutionGenerator(5,1);
+		double eTime = System.nanoTime();
 		
-		System.out.println(test.toString()+"\n");	
+		SolutionGenerator test = new SolutionGenerator(7, 1);
+	
+		int[] colorCount = test.getColorCount();
+		System.out.println(test.toString() + "\n");
+		
+		test.isGridValid();
+		
+		System.out.println("\nError Counts\nYellow: "+test.errorCount[0]);
+		System.out.println("Blue: "+test.errorCount[1]);
+		System.out.println("Green: "+test.errorCount[2]);
+		System.out.println("Orange: "+test.errorCount[3]);
+		System.out.println("Red: "+test.errorCount[4]);
+		System.out.println("Purple: "+test.errorCount[5]);
 		
 
-		/*System.out.println("Red: "+(test.getColorCount())[0]);
-		System.out.println("Green: "+(test.getColorCount())[1]);
-		System.out.println("Blue: "+(test.getColorCount())[2]);
-		System.out.println("Yellow: "+(test.getColorCount())[3]);
-		System.out.println("Orange: "+(test.getColorCount())[4]);*/
+		System.out.println("\nColor Counts\nYellow: "+colorCount[0]);
+		System.out.println("Blue: "+colorCount[1]);
+		System.out.println("Green: "+colorCount[2]);
+		System.out.println("Orange: "+colorCount[3]);
+		System.out.println("Red: "+colorCount[4]);
+		System.out.println("Purple: "+colorCount[5]);
+		
+		
+		System.out.println("\n" + Math.round(System.nanoTime() - eTime)/1000000000d + " seconds");
+		
+		
 	}
 
 }
